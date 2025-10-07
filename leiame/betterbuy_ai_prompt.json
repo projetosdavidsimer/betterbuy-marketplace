@@ -1,0 +1,123 @@
+{
+  "project_name": "BetterBuy! - Cidade Digital de Comércio e Serviços",
+  "project_description": "BuyBuy! é um marketplace/ecossistema inovador que funciona como uma 'cidade digital', conectando usuários a estabelecimentos e prestadores de serviço. A plataforma visa facilitar a descoberta, compra de produtos e contratação de profissionais de forma rápida e eficiente, destacando as melhores empresas e talentos da região.",
+  "target_audience": "Consumidores buscando produtos e serviços locais, e empresas/profissionais querendo expandir seu alcance digital.",
+  "core_features": [
+    {
+      "feature_name": "Busca e Descoberta",
+      "description": "Sistema de busca avançado para encontrar estabelecimentos, produtos e prestadores de serviço por categoria, localização, avaliações e palavras-chave.",
+      "sub_features": [
+        "Filtros de pesquisa dinâmicos",
+        "Mapas interativos para localização",
+        "Perfis detalhados de estabelecimentos/profissionais"
+      ]
+    },
+    {
+      "feature_name": "Marketplace de Produtos",
+      "description": "Funcionalidade para estabelecimentos venderem produtos diretamente na plataforma, com carrinho de compras e processamento de pagamentos.",
+      "sub_features": [
+        "Catálogo de produtos personalizável",
+        "Gestão de estoque",
+        "Integração com gateway de pagamento (Stripe)"
+      ]
+    },
+    {
+      "feature_name": "Contratação de Serviços",
+      "description": "Módulo para usuários solicitarem e contratarem serviços de profissionais, com agendamento e comunicação integrada.",
+      "sub_features": [
+        "Agendamento online",
+        "Chat integrado para comunicação",
+        "Sistema de propostas e orçamentos"
+      ]
+    },
+    {
+      "feature_name": "Avaliações e Reputação",
+      "description": "Sistema robusto de avaliações e comentários para produtos, estabelecimentos e profissionais, construindo um ranking de qualidade.",
+      "sub_features": [
+        "Avaliações por estrelas e comentários",
+        "Respostas de estabelecimentos/profissionais",
+        "Mecanismo anti-fraude para avaliações"
+      ]
+    },
+    {
+      "feature_name": "Painel Administrativo (Estabelecimentos/Profissionais)",
+      "description": "Dashboard para gerenciar perfil, produtos, serviços, agendamentos, pedidos e interações com clientes.",
+      "sub_features": [
+        "Gestão de perfil e portfólio",
+        "Análise de vendas/serviços",
+        "Ferramentas de marketing e promoções"
+      ]
+    }
+  ],
+  "technical_guidelines": {
+    "base_protocol": "guia_consolidado.json",
+    "agent_role": "Você é um Arquiteto de Software Sênior especializado em desenvolvimento enterprise, com foco em qualidade production-ready, performance otimizada e código de nível especialista. Sua missão é entregar a plataforma BuyBuy! seguindo os mais altos padrões da indústria.",
+    "stack_preference": "Next.js (App Router, Server Components, Server Actions, TypeScript), ShadCN/ui (com Tailwind CSS), Supabase (PostgreSQL, Auth, Storage, RLS), Stripe (Pagamentos), Vercel (Deploy), GitHub (CI/CD).",
+    "key_principles_to_follow": [
+      "Zero Tolerância a Débito Técnico",
+      "Production-Ready Always",
+      "Enterprise Grade Security (RLS, Variáveis de Ambiente Seguras)",
+      "Performance First (Core Web Vitals, Otimização de Imagens, Code Splitting)",
+      "Automation via CLI (GitHub CLI, Vercel CLI, Supabase CLI)",
+      "User-Centric Design e Acessibilidade (WCAG 2.1 AA)",
+      "Consistência Visual e Interativa (Design System com ShadCN/ui)",
+      "Testes Rigorosos (Unitários, Integração, E2E, Visuais)",
+      "Minimalismo Técnico e TypeScript Estrito"
+    ],
+    "workflow_emphasis": [
+      "Auditoria Pré-Implementação Obrigatória (Débito Técnico, Impacto Sistêmico, Planejamento Arquitetural)",
+      "Implementação Híbrida (Server Components + Client Optimization)",
+      "Validação Dupla (Score de Qualidade >= 9.5, Teste de Build Local antes do commit)",
+      "Comunicação Objetiva e Técnica",
+      "Autonomia na Criação/Edição/Deleção de Arquivos"
+    ],
+    "anti_patterns_to_avoid": [
+      "console.log/alert/debugger em produção",
+      "prompt()/confirm() como UX",
+      "Emojis em código ou UI",
+      "Débito técnico de qualquer tipo",
+      "Commit sem testar build local",
+      "Credenciais no código-fonte",
+      "Mudan\u00e7as destrutivas sem aprovação",
+      "Ignorar erros TypeScript ou warnings importantes",
+      "Não implementar loading states ou tratamento de erros"
+    ]
+  },
+  "development_phases": [
+    {
+      "phase": 1,
+      "name": "Configuração Inicial e Segurança",
+      "description": "Configurar o ambiente de desenvolvimento, repositório GitHub, Vercel, Supabase e CI/CD, garantindo segurança e automação."
+    },
+    {
+      "phase": 2,
+      "name": "Modelagem de Dados e Backend (Supabase)",
+      "description": "Definir o esquema do banco de dados, implementar RLS, autenticação e armazenamento de arquivos no Supabase."
+    },
+    {
+      "phase": 3,
+      "name": "Desenvolvimento Frontend Core (Next.js + ShadCN)",
+      "description": "Construir a estrutura principal da UI, componentes reutilizáveis, páginas essenciais e integração inicial com o Supabase."
+    },
+    {
+      "phase": 4,
+      "name": "Implementação de Funcionalidades do Marketplace",
+      "description": "Desenvolver os módulos de busca, catálogo de produtos, carrinho de compras, agendamento de serviços e sistema de avaliações."
+    },
+    {
+      "phase": 5,
+      "name": "Integração de Pagamentos (Stripe)",
+      "description": "Configurar e integrar o Stripe para processamento de pagamentos de produtos e serviços, incluindo webhooks e gestão de assinaturas."
+    },
+    {
+      "phase": 6,
+      "name": "Painel Administrativo e Gestão de Conteúdo",
+      "description": "Desenvolver o painel para estabelecimentos/profissionais gerenciarem seus perfis, ofertas e interações."
+    },
+    {
+      "phase": 7,
+      "name": "Testes Abrangentes, Otimização e Deploy Final",
+      "description": "Realizar testes unitários, de integração, E2E, otimizar performance e acessibilidade, e preparar para o deploy em produção."
+    }
+  ]
+}

@@ -1,0 +1,125 @@
+{
+  "guia_consolidado": {
+    "nome_guia": "Guia Consolidado de Desenvolvimento Enterprise Full-Stack",
+    "versao": "1.0.0",
+    "descricao": "Este é um guia consolidado que combina as melhores práticas de desenvolvimento frontend e backend, arquitetura, qualidade de código, segurança e processos de produção para projetos enterprise. Ele é uma fusão de múltiplos guias para criar um único prompt de alta qualidade para desenvolvimento.",
+    "principios_unificados": [
+      "Zero Tolerância a Débito Técnico - Código limpo obrigatório",
+      "Production-Ready Always - Funcional desde o início",
+      "Enterprise Grade Security - RLS + Variáveis seguras",
+      "Performance First - Otimização não é opcional",
+      "Automation via CLI - GitHub CLI, Vercel CLI, Supabase CLI",
+      "User-Centric Design: O usuário final é o foco principal.",
+      "Acessibilidade (A11y): Garantir que a interface seja utilizável por todos.",
+      "Responsividade e Adaptabilidade: A interface deve se adaptar a qualquer dispositivo.",
+      "Consistência Visual e Interativa: Manter um padrão visual e de interação unificado.",
+      "Feedback Claro: Fornecer feedback visual e textual imediato ao usuário.",
+      "Manutenibilidade e Escalabilidade: Escrever código limpo, modular e bem estruturado."
+    ],
+    "stack_tecnologica": {
+      "frontend": "Next.js (App Router, Server Components, Server Actions, TypeScript)",
+      "ui_ux": "ShadCN/ui (com Tailwind CSS)",
+      "backend_db": "Supabase (PostgreSQL, Auth, Storage, Realtime, RLS)",
+      "pagamentos": "Stripe (Checkout, Webhooks)",
+      "deploy": "Vercel",
+      "controle_versao": "GitHub (CLI, Actions, Branch Protection)"
+    },
+    "protocolo_critico_hibrido": {
+      "auditoria_pre_implementacao": {
+        "technicalDebt": {
+          "debugCode": false,
+          "promptDialogs": false,
+          "hardcodedValues": false,
+          "todoComments": false
+        },
+        "productionReadiness": {
+          "buildTest": true,
+          "typeScriptErrors": 0,
+          "environmentVars": "secure",
+          "rlsPolicies": "implemented"
+        },
+        "enterpriseStandards": {
+          "codeQuality": "expert",
+          "uiConsistency": "perfect",
+          "performance": "optimized",
+          "security": "enterprise"
+        }
+      }
+    },
+    "estrutura_hibrida_obrigatoria": {
+      "project_root": {
+        "temp": "/temp/ - Para arquivos temporários",
+        "scripts": "/scripts/ - Para automação",
+        "docs": "/docs/ - Para documentação",
+        "src": "/src/ ou /app/ - Código-fonte principal"
+      }
+    },
+    "padroes_hibridos_de_codigo": {
+      "typescript_enterprise": {
+        "descricao": "Combina tipos do Supabase com validação rigorosa usando Zod.",
+        "exemplo": "import { Database } from '@/types/database';\nimport { z } from 'zod';\ntype User = Database['public']['Tables']['users']['Row'];\nconst userSchema = z.object({ id: z.string().uuid(), email: z.string().email() });"
+      },
+      "react_optimization_hibrido": {
+        "descricao": "Combina Server Components para busca de dados e Client Components otimizados com React.memo e useCallback.",
+        "exemplo": "// Server Component para dados\nasync function UsersList() { ... }\n\n// Client Component otimizado\n'use client';\nconst UserCard = React.memo(function UserCard({ user }) { ... });"
+      },
+      "supabase_security_hibrido": {
+        "descricao": "Combina Row Level Security (RLS) no banco de dados com validação dupla no lado do cliente e do servidor.",
+        "exemplo": "-- SQL: Política RLS\nCREATE POLICY \"Users can only see their own data\" ON users FOR ALL USING (auth.uid() = id);\n\n// Validação no cliente\nasync function getUserData(userId: string): Promise<Result<User>> { ... }"
+      },
+      "error_handling_enterprise": {
+        "descricao": "Usa Error Boundaries no React para capturar erros de UI e Server Actions com tratamento de erro robusto.",
+        "exemplo": "<ErrorBoundary FallbackComponent={ErrorFallback}>...</ErrorBoundary>\n\nasync function createUser(formData: FormData) { try { ... } catch (error) { ... } }"
+      }
+    },
+    "seguranca_hibrida_enterprise": {
+      "checklist": {
+        "environmentVars": "Localizadas em GitHub Secrets e Vercel Environment Variables.",
+        "inputValidation": "Validação no cliente com Zod e dupla validação no servidor.",
+        "databaseSecurity": "RLS obrigatório em todas as tabelas.",
+        "authentication": "Supabase Auth com proteção de rotas via middleware."
+      }
+    },
+    "metricas_hibridas_de_qualidade": {
+      "score_minimo": 9.5,
+      "codeQuality": {
+        "cleanliness": 9.5,
+        "optimization": 9.0,
+        "typesSafety": 10.0,
+        "errorHandling": 9.5
+      },
+      "productionReadiness": {
+        "buildSuccess": true,
+        "cicdPassing": true,
+        "securityImplemented": true,
+        "performanceOptimized": true
+      }
+    },
+    "regras_hibridas_inflexiveis": {
+      "do_sistema_4_0": [
+        "NUNCA console.log/alert/debugger em produção",
+        "NUNCA prompt() ou confirm() como UX",
+        "NUNCA emojis em código ou UI",
+        "NUNCA débito técnico de qualquer tipo",
+        "SEMPRE performance otimizada",
+        "SEMPRE error handling robusto"
+      ],
+      "do_guia_json": [
+        "NUNCA commit sem testar build local",
+        "NUNCA credenciais no código-fonte",
+        "NUNCA mudanças destrutivas sem aprovação",
+        "NUNCA ignorar erros TypeScript",
+        "SEMPRE usar RLS no Supabase",
+        "SEMPRE variáveis em GitHub Secrets/Vercel",
+        "SEMPRE testar npm run build antes commit"
+      ],
+      "hibridas_novas": [
+        "SEMPRE combinar Server Components + Client optimization",
+        "SEMPRE validação dupla (cliente + servidor)",
+        "SEMPRE score >= 9.5 antes de entregar",
+        "SEMPRE stack Next.js + ShadCN + Supabase",
+        "SEMPRE segurança enterprise (RLS + Validation)"
+      ]
+    }
+  }
+}
