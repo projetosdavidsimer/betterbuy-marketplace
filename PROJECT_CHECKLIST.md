@@ -649,12 +649,118 @@ Marketplace/ecossistema que conecta usuários a estabelecimentos e prestadores d
 
 ---
 
-**Última atualização:** 2025-01-08 04:30
-**Versão:** 2.0.0
-**Status:** Fase 3 CONCLUÍDA (100%) ✅ | Todas funcionalidades essenciais implementadas
-**Próximo:** Fase 4 (Painel Administrativo) ou Integrações Finais (Stripe)
+**Sessão 14 - Testes e Refinamentos (Opção 1) - 2025-01-08:**
+- ✅ Criado seed.sql com dados realistas
+- ✅ Criado seed-simple.sql (requer user ID manual)
+- ✅ Criado seed-auto.sql (pega user ID automaticamente)
+- ✅ Criado clean-and-seed.sql (limpeza completa + seed)
+- ✅ Criado fix-profiles.sql (corrigir perfis sem usuário)
+- ✅ Criado TESTES_MANUAIS.md (checklist completo de testes)
+- ✅ Criado SEED_INSTRUCTIONS.md (instruções detalhadas)
+- ✅ Corrigido nomes de colunas (stock_quantity → stock, image_url → url)
+- ✅ Corrigido loop infinito no SortSelect (useCallback + handleSortChange)
+- ✅ Aplicada migration de favoritos no banco
+- ✅ Seed executado com sucesso (5 estabelecimentos, 9 serviços)
+- ⚠️ **PENDENTE:** Produtos ainda mostrando apenas 6 (antigos)
+- ⚠️ **PENDENTE:** Executar clean-and-seed.sql para ter 10 produtos novos
+- ⚠️ **PENDENTE:** Resolver erro HTTP 431 (limpar cookies)
+- ⚠️ **PENDENTE:** Testar fluxo completo após correções
+
+**Status Atual:**
+- Banco populado parcialmente (serviços ✅, estabelecimentos ✅, produtos ⚠️)
+- Erro de loop infinito corrigido
+- Build: 0 erros, 0 warnings
+- Pronto para testes após limpeza de cookies
+
+---
+
+**Última atualização:** 2025-01-08 18:00
+**Versão:** 2.1.0
+**Status:** Opção 1 (Testes) EM ANDAMENTO (70%) | Aguardando limpeza final e testes
+**Próximo:** Finalizar Opção 1 → Depois Opção 2 (Painel do Vendedor)
 **Deploy Produção:** https://betterbuy-2is89shm0-projetosdavidsimers-projects.vercel.app
 **Dev Local:** http://localhost:3000 (Supabase produção)
+
+---
+
+## 🎯 Quando Voltar - Próximos Passos
+
+### 1. Resolver Problemas Pendentes (15 min)
+
+**A. Limpar Cookies (Erro HTTP 431)**
+- Pressionar F12 no navegador
+- Application → Cookies → Clear All
+- Recarregar página (Ctrl+F5)
+
+**B. Popular Produtos Corretamente**
+- Acessar Supabase Studio SQL Editor
+- Executar `clean-and-seed.sql` completo
+- Verificar: deve ter 10 produtos novos
+
+**C. Verificar se Erro de Loop Sumiu**
+- Acessar `/explorar/servicos`
+- Não deve mais dar erro de "Maximum update depth"
+
+### 2. Executar Testes Manuais (1-2 horas)
+
+Usar o arquivo: `TESTES_MANUAIS.md`
+
+**Prioridade Alta:**
+- [ ] Busca e filtros funcionando
+- [ ] Adicionar ao carrinho
+- [ ] Checkout completo
+- [ ] Criar pedido
+- [ ] Avaliar produto
+- [ ] Favoritar item
+
+### 3. Documentar Bugs Encontrados
+
+No arquivo `TESTES_MANUAIS.md`, seção "Bugs Encontrados"
+
+### 4. Após Testes OK → Opção 2
+
+**Aguardar confirmação para iniciar Painel do Vendedor**
+
+---
+
+## 📝 Arquivos Importantes Criados Hoje
+
+1. `supabase/seed-auto.sql` - Seed automático (USAR ESTE)
+2. `supabase/clean-and-seed.sql` - Limpeza + seed completo
+3. `supabase/fix-profiles.sql` - Corrigir perfis
+4. `TESTES_MANUAIS.md` - Checklist de testes
+5. `SEED_INSTRUCTIONS.md` - Instruções de seed
+
+---
+
+## 🐛 Problemas Conhecidos
+
+1. **HTTP 431** - Cookies muito grandes
+   - Solução: Limpar cookies do navegador
+   
+2. **Produtos antigos** - Apenas 6 produtos (não 10)
+   - Solução: Executar `clean-and-seed.sql`
+   
+3. **Loop infinito** - ✅ RESOLVIDO
+   - Corrigido com useCallback + handleSortChange
+
+---
+
+## 📊 Progresso das Opções
+
+**Opção 1: Testes e Refinamentos** - 70% ⏳
+- ✅ Seed criado
+- ✅ Documentação criada
+- ✅ Bugs corrigidos
+- ⏳ Banco populado parcialmente
+- ⏳ Testes manuais pendentes
+
+**Opção 2: Painel do Vendedor** - 0% 🔜
+- Aguardando conclusão da Opção 1
+
+**Opção 3: Melhorias de UX/UI** - 0% 🔜
+
+**Opção 4: Funcionalidades Extras** - 0% 🔜
 
 ---
 
