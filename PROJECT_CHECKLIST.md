@@ -49,7 +49,11 @@ Marketplace/ecossistema que conecta usuários a estabelecimentos e prestadores d
 - [x] Páginas 404 customizadas para todas as rotas
 - [x] Otimização de imagens (sizes + priority)
 - [x] Correção de hydration errors (sidebar + Radix UI)
-- [ ] Carrinho de compras
+- [x] Carrinho de compras (Context API + localStorage)
+- [x] Página do carrinho (/carrinho)
+- [x] Botão flutuante do carrinho
+- [x] Adicionar ao carrinho nos cards
+- [x] Adicionar ao carrinho nas páginas de detalhes
 - [ ] Sistema de checkout
 - [ ] Integração com Stripe
 - [ ] Agendamento de serviços
@@ -109,8 +113,11 @@ Marketplace/ecossistema que conecta usuários a estabelecimentos e prestadores d
 - [ ] Avaliações e comentários
 
 #### Compras e Pedidos
-- [ ] Adicionar ao carrinho
-- [ ] Visualizar carrinho
+- [x] Adicionar ao carrinho
+- [x] Visualizar carrinho
+- [x] Remover itens do carrinho
+- [x] Atualizar quantidade
+- [x] Persistência com localStorage
 - [ ] Checkout
 - [ ] Pagamento (Stripe)
 - [ ] Confirmação de pedido
@@ -283,7 +290,8 @@ Marketplace/ecossistema que conecta usuários a estabelecimentos e prestadores d
 - [x] BusinessCard
 
 ### Componentes Pendentes 🔜
-- [ ] CartButton
+- [x] CartButton
+- [x] AddToCartButton
 - [ ] SearchBar
 - [ ] FilterSidebar
 - [ ] ProductGallery
@@ -533,9 +541,30 @@ Marketplace/ecossistema que conecta usuários a estabelecimentos e prestadores d
 
 ---
 
-**Última atualização:** 2025-01-08 00:45
-**Versão:** 1.4.0
-**Status:** Fase 3 EM DESENVOLVIMENTO | Ambiente local configurado ✅
-**Próximo:** Carrinho de compras (Context + localStorage)
+**Sessão 9 - Carrinho de Compras Implementado (2025-01-08):**
+- ✅ Criado CartContext com Context API
+- ✅ Implementado gerenciamento de estado do carrinho
+- ✅ Persistência com localStorage
+- ✅ Suporte para produtos e serviços
+- ✅ Controle de quantidade e estoque máximo
+- ✅ Criado CartButton flutuante com badge de contador
+- ✅ Implementada página do carrinho (/carrinho)
+- ✅ Interface completa: visualizar, remover, atualizar quantidade
+- ✅ Resumo do pedido com cálculo de totais
+- ✅ Empty state quando carrinho vazio
+- ✅ Criado AddToCartButton reutilizável
+- ✅ Integrado botão "Adicionar ao carrinho" no ProductCard
+- ✅ Integrado botão "Adicionar ao carrinho" na página de detalhes
+- ✅ Feedback visual ao adicionar item (animaç��o)
+- ✅ CartProvider integrado no layout raiz
+- ✅ Build passou: 0 erros, 0 warnings
+- ✅ **CARRINHO DE COMPRAS 100% FUNCIONAL**
+
+---
+
+**Última atualização:** 2025-01-08 01:15
+**Versão:** 1.5.0
+**Status:** Fase 3 EM DESENVOLVIMENTO (75%) | Carrinho implementado ✅
+**Próximo:** Sistema de checkout + Integração Stripe
 **Deploy Produção:** https://betterbuy-2is89shm0-projetosdavidsimers-projects.vercel.app
 **Dev Local:** http://localhost:3000 (Supabase local)
