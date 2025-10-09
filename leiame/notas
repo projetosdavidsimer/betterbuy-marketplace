@@ -1,0 +1,6 @@
+Instalar supabase cli 
+
+npm install supabase --save-dev
+
+---
+
